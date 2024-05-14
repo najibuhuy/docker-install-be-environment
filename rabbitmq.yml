@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"  # RabbitMQ default port
+      - "15672:15672"  # RabbitMQ Management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: "najibalyasyfi"
+      RABBITMQ_DEFAULT_PASS: "ej3Ado93fP8341923e0132KRdh8294hrX420"
+    volumes:
+      - ./rabbitmq/data:/var/lib/rabbitmq  # Persisting RabbitMQ data

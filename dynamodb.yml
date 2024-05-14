@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - dynamodb-data:/home/dynamodblocal/data
+
+volumes:
+  dynamodb-data:
+    driver: local
+
+# AWS_ACCESS_KEY_ID = nfi3urenfvuebvue8934hfu3r8ur94Ani3NFIJINFe23r04
+# AWS_ACCESS_KEY_ID = dummy_secret_access_key
+# AWS_DEFAULT_REGION=ap-southeast-1

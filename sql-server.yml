@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  sql_server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "A!s3d4f5g6h7j8k9l0"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
