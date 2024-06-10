@@ -9,3 +9,18 @@ services:
       SA_PASSWORD: "A!s3d4f5g6h7j8k9l0"
       ACCEPT_EULA: "Y"
       MSSQL_PID: "Express"
+
+#docker exec -it <container_name_or_id> /opt/mssql-tools/bin/mssql-cli -S localhost -U SA -P YourStrong!Passw0rd -Q "CREATE DATABASE YourDatabaseName;"
+#CREATE LOGIN user_backend WITH PASSWORD = 'YourUserPassword';
+# USE YourDatabaseName;
+# CREATE USER user_backend FOR LOGIN user_backend;
+# EXEC sp_addrolemember 'db_owner', 'user_backend';
+# USE master;
+# GRANT CREATE DATABASE TO user_backend;
+# CREATE LOGIN user_backend WITH PASSWORD = 'YourUserPassword';
+# USE YourDatabaseName;
+# CREATE USER user_backend FOR LOGIN user_backend;
+# USE YourDatabaseName;
+# CREATE ROLE db_creator;
+# GRANT CREATE DATABASE TO db_creator;
+# ALTER ROLE db_creator ADD MEMBER user_backend;
